@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #383838;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f1f1f;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+  /* bg 0프로일때 100프로 일때 수동으로 확인 후, 초기값은 작은 값으로 설정*/
+.bg {
+  background: url('https://images.unsplash.com/photo-1682167175858-bc7d1c1329bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')
+  no-repeat center center/cover;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  /* filter:blur(30px); */
+}
+  /* loading-text 0프로일때 100프로 일때 수동으로 확인*/
+.loading-text {
+  font-size:50px;
+  color:#fff;
+  /* opacity:0; */
+}
