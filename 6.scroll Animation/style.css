@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efedd6;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* 별도의 bg, box-container말고, body에 배경을 주면 되었다!! */
+  /* bg 0프로일때 100프로 일때 수동으로 확인 후, 초기값은 작은 값으로 설정*/
+/* .bg {
+  background-color:antiquewhite;
+  width: 100vw;
+  height: 100vh;
+} */
+
+/* .box-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  /* width: 300vw;
+  height: 80vh;
+  outline: 1px solid red;
+} */
+
+.box {
+  font-size:50px;
+  color:#fff;
+  border-radius: 10px;
+  background-color: #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform:translateX(400%);
+  transition:transform 0.4s ease;
+  width: 400px;
+  height: 200px;
+  margin:10px;
+}
+
+.box:nth-of-type(even){
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box h2{
+  font-size:45px;
+}
