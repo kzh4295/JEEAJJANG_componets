@@ -1,8 +1,18 @@
-const labels = document.querySelectorAll('.form-control label')
+jokeEl = document.getElementById('joke');
+jokeBtn = document.getElementById('jokeBtn');
 
-labels.forEach(label=>{
-  label.innerHTML = label.innerText
-      .split('')
-      .map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`)
-      .join('')
-})
+jokeBtn.addEventListener('click', () => {
+  const config = {
+    headers: {
+      Accept: 'application/json',
+    },
+  }
+
+  fetch('https://icanhazdadjoke.com', config)
+    .then((res) => res.json())
+    .then((data) => {
+      jokeEl.innerHTML = data.joke
+    })
+
+});
+
